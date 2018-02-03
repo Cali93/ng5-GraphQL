@@ -1,0 +1,24 @@
+{
+  "name": "ng5-graphql",
+  "version": "1.0.0",
+  "description": "Little project to get started with GraphQL &amp; Apollo",
+  "main": "server.js",
+  "scripts": {
+    "dev:server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cali93/ng5-GraphQL.git"
+  },
+  "author": "Cali Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cali93/ng5-GraphQL/issues"
+  },
+  "homepage": "https://github.com/Cali93/ng5-GraphQL#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3"
+  }
+}
