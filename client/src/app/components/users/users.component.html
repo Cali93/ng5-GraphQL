@@ -25,9 +25,10 @@
           <div class="form-group">
             <label for="name">User Name</label>
             <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="name">
+            <input type="text" class="form-control" name="email" placeholder="Email" [(ngModel)]="email">
           </div>
-          <button type="button" class="btn btn-default" *ngIf="!user.id" (click)="createUser(name);">Create</button>
-          <button type="button" class="btn btn-default" *ngIf="user.id" (click)="updateUser(name);">Update</button>
+          <button type="button" class="btn btn-default" *ngIf="!user.id" (click)="createUser(name,email);">Create</button>
+          <button type="button" class="btn btn-default" *ngIf="user.id" (click)="updateUser(name,email);">Update</button>
         </form>
       </div>
     </ng-template>
@@ -38,6 +39,7 @@
         <tr>
           <th class="text-center">ID</th>
           <th class="text-center">Name</th>
+          <th class="text-center">Email</th>
           <th class="text-center">Actions</th>
         </tr>
       </thead>
@@ -45,6 +47,7 @@
         <tr *ngFor="let user of users; let i = index">
           <td>{{ i+1 }}</td>
           <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
           <td>
             <!-- Show Edit User Form  -->
             <button class="btn btn-info" (click)="showEditUserForm(user, template)">
