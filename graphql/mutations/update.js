@@ -11,13 +11,16 @@ exports.update = {
       type: new GraphQLNonNull(GraphQLString)
     },
     name: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: new GraphQLNonNull(GraphQLString)
+    },
+    email: {
+      type: new GraphQLNonNull(GraphQLString)
     }
   },
   resolve(root, params) {
     return UserModel.findByIdAndUpdate(
       params.id,
-      { $set: { name: params.name } },
+      { $set: { name: params.name, email: params.email } },
       { new: true }
     )
       .catch(err => new Error(err));

@@ -8,6 +8,9 @@ exports.add = {
   args: {
     name: {
       type: new GraphQLNonNull(GraphQLString),
+    },
+    email: {
+      type: new GraphQLNonNull(GraphQLString)
     }
   },
   resolve(root, params) {
