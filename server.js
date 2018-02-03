@@ -1,16 +1,21 @@
 const express = require('express');
 const expressGraphQL = require ('express-graphql');
-const schema = require ('./schema.js');
-
-
+const mongoose = require('./config/mongoose');
+const cors = require('cors');
+const db = mongoose();
 const app = express();
 
-const port = process.env.PORT || 4000
+app.use('*', cors())
 
-app.use('/graphql', expressGraphQL({
-  schema:schema,
+const userSchema = require ('./graphql/index').userSchema;
+
+app.use('/graphql', cors(), expressGraphQL({
+  schema:userSchema,
+  rootValue:global,
   graphiql:true
-}))
+}));
+
+const port = process.env.PORT || 4000
 
 app.listen(port, ()=>{
   console.log('Server is running on port' + port)

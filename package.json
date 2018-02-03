@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Cali93/ng5-GraphQL#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
-    "graphql": "^0.12.3"
+    "graphql": "^0.12.3",
+    "mongoose": "^5.0.3"
   }
 }
