@@ -4,7 +4,7 @@
   "description": "Little project to get started with GraphQL &amp; Apollo",
   "main": "server.js",
   "scripts": {
-    "dev:server": "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
