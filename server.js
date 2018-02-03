@@ -1,5 +1,5 @@
 const express = require('express');
-const expressGraphQL = require ('express-graphql');
+const graphqlHTTP = require("express-graphql");
 const mongoose = require('./config/mongoose');
 const cors = require('cors');
 const db = mongoose();
@@ -9,7 +9,7 @@ app.use('*', cors())
 
 const userSchema = require ('./graphql/index').userSchema;
 
-app.use('/graphql', cors(), expressGraphQL({
+app.use('/graphql', cors(), graphqlHTTP({
   schema:userSchema,
   rootValue:global,
   graphiql:true

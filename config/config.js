@@ -1,9 +1,9 @@
 module.exports = {
   //MongoDB configuration
   development: {
-      db: 'mongodb://localhost/graphql',
+      db: 'mongodb://localhost/ng5graphql',
       app: {
-          name: 'graphql'
+          name: 'ng5graphql'
       }
   }
   // ,
